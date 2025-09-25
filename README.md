@@ -18,6 +18,11 @@ This script automates converting QNAP SSL certificates (`stunnel.pem` and `uca.p
    ```bash
    ./update_plex_cert.sh
 3. To setup the certificate in Plex.
-   - Open the Plex Web App in QNAPs
-   - Go to Settings > Network
+   - Open the Plex Web App (i.e. in your browser go to http://mynas.myqnapcloud.com:32400)
+   - Click on "Account Settings" then find Network under the name of your server (e.g. mynas)
    - Under Custom certificate location, set the path to $PLEX_DIR/plex.p12 (e.g. /share/CACHEDEV4_DATA/.qpkg/PlexMediaServer/Library/Plex Media Server/plex.p12)
+   - Under Custom certificate domain, put the domain that your NAS' full domain (e.g. mynas.myqnapcloud.com). This is the domain name that was used for your certificate.
+4. Stop and the start your Plex App in your QNAP.
+5. Access the Plex Web App using https://mynas.myqnapcloud.com:32400 (note http<b>s</b>).
+
+Check for the secure lock (or whatever your browser uses) that signifies a secure connection.
